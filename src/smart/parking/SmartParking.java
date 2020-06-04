@@ -23,6 +23,8 @@ public class SmartParking {
 
         Scanner sc = new Scanner(System.in);
         Admin ad = new Admin();
+        String ep;
+        String q;
         User us;
         while (true) {
             System.out.println();
@@ -62,7 +64,7 @@ public class SmartParking {
                     System.out.println();
                     System.out.println("*********************************************************");
                     System.out.print("Press any key to return to main menu: ");
-                    String q = sc.next();
+                    q = sc.next();
                     System.out.println();
                     System.out.println();
                     System.out.println();
@@ -95,7 +97,7 @@ public class SmartParking {
                     System.out.println();
                     System.out.println("*********************************************************");
                     System.out.print("Press any key to return to main menu: ");
-                    String q1 = sc.next();
+                    q = sc.next();
                     System.out.println();
                     System.out.println();
                     System.out.println();
@@ -103,23 +105,41 @@ public class SmartParking {
                     break;
                 case 3:
                     //List of Vehicles Parked
-                    ad.displayVehiclesParked();
+                    System.out.print("Enter admin password: ");
+                    ep = sc.next();
+                    if (ep.equals(admin_password)) {
+                        ad.displayVehiclesParked();
+                    } else {
+                        System.out.println("Error!, Incorrect admin password, try again");
+                    }
                     System.out.print("Press any key to return to main menu: ");
-                    String q3 = sc.next();
+                    q = sc.next();
                     break;
                 case 4:
-                    ad.displayStatistics();
+                    System.out.print("Enter admin password: ");
+                    ep = sc.next();
+                    if (ep.equals(admin_password)) {
+                        ad.displayStatistics();
+                    } else {
+                        System.out.println("Error!, Incorrect admin password, try again");
+                    }
                     System.out.print("Press any key to return to main menu: ");
-                    String q4 = sc.next();
+                    q = sc.next();
                     break;
                 case 5:
                     //display chart
-                    ad.displayPrice();
+                    System.out.print("Enter admin password: ");
+                    ep = sc.next();
+                    if (ep.equals(admin_password)) {
+                        ad.displayPrice();
+                    } else {
+                        System.out.println("Error!, Incorrect admin password, try again");
+                    }
                     System.out.print("Press any key to return to main menu: ");
-                    String q5 = sc.next();
+                    q = sc.next();
                     break;
                 case 6:
-//                    System.out.println("6");
+
                     System.out.println();
                     System.out.println();
                     System.out.println("*********************************************************");
@@ -127,7 +147,7 @@ public class SmartParking {
                     String un6 = sc.next();
                     if (un6.equalsIgnoreCase("admin")) {
                         System.out.print("Enter admin password: ");
-                        String ep = sc.next();
+                        ep = sc.next();
                         if (ep.equals(admin_password)) {
                             System.out.println();
                             System.out.println("*** Welcome Admin ***");
@@ -158,7 +178,7 @@ public class SmartParking {
                     System.out.println();
                     System.out.println("*********************************************************");
                     System.out.print("Press any key to return to main menu: ");
-                    String q6 = sc.next();
+                    q = sc.next();
                     System.out.println();
                     System.out.println();
                     System.out.println();
