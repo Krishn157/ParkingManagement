@@ -198,6 +198,8 @@ an appropriate message is displayed.
 ![image-009](https://user-images.githubusercontent.com/47914919/124637115-f3229780-dea6-11eb-9b04-f517c85eb433.jpg)
 
 
+### Class Diagram
+![image](https://user-images.githubusercontent.com/47914919/128407835-c8ef78c9-cd22-4520-b7ca-377044864545.png)
 
 
 
